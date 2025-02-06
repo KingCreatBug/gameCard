@@ -309,7 +309,7 @@ html {
   --primaryColor: "#f6f6f6";
 }
 
-.menuItem, .navbarInner, .money, .dropdownLink, .actionProfile, .actionLanguage, .actionBtn, .action, .slideText, .HeaderTopInner {
+.menuItem, .navbarInner, .navDropdown, .money, .dropdownLink, .actionProfile, .actionLanguage, .actionBtn, .action, .slideText, .HeaderTopInner {
   display: flex;
   align-items: center;
 }
@@ -459,8 +459,36 @@ html {
 }
 
 .navbar {
+  position: relative;
   padding: 10px 0;
   background: linear-gradient(90deg, #007534 0%, #009643 41%, #006c30 100%);
+}
+
+.navDropdown {
+  position: absolute;
+  overflow: hidden;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 0 0 15px 15px;
+  background: rgba(0, 67, 42, 0.9);
+  z-index: 2;
+}
+
+.navDropdownImg {
+  width: 183px;
+  height: 223px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: all 0.25s;
+  cursor: pointer;
+}
+.navDropdownImg:hover {
+  box-shadow: 0px 0px 4px 7px rgba(59, 217, 172, 0.3);
+  scale: 1.06;
 }
 
 .navbarInner {

@@ -76,36 +76,18 @@ window.addEventListener("template-loaded", () => {
     });
 });
 
-// Slide Show
-// Cách dùng thêm class="mySlides" vào các slideshow
-let slideIndex = 0;
-showSlides();
+document.addEventListener("DOMContentLoaded", function () {
+    const menuItems = document.querySelectorAll(".menuItem");
+    const navDropdown = document.querySelector(".navDropdown");
+    const navbar = document.querySelector(".navbar");
 
-function showSlides() {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-        slides[slideIndex - 1].style.display = "block";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    // Điều chỉnh thông số chạy slide theo giây(ms)
-    setTimeout(showSlides, 5000);
-}
+    menuItems.forEach((item) => {
+        item.addEventListener("mouseenter", () => {
+            navDropdown.style.transform = "translateX(0)";
+        });
+    });
 
-// Active
-const ul = document.querySelector(".product-select__box-wrap");
-
-ul.addEventListener("click", (e) => {
-    e.preventDefault();
-    let li = e.target.closest(".product-select__size");
-    if (li) {
-        ul.querySelectorAll(".product-select__size").forEach((elm) =>
-            elm.classList.remove("--active")
-        );
-        li.classList.add("--active");
-    }
+    navbar.addEventListener("mouseleave", () => {
+        navDropdown.style.transform = "translateX(-100%)";
+    });
 });
