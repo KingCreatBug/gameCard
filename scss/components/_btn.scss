@@ -1,0 +1,19 @@
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    @extend %flexItemCenter;
+    justify-content: center;
+    width: 150px;
+    height: 40px;
+    color: #ffe81a;
+
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 99px;
+    transition: 0.25s all;
+}

@@ -1,0 +1,211 @@
+@use "../abstracts";
+
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.headerTop {
+    background: #00432a;
+    padding: 10px 0;
+}
+
+.HeaderTopInner {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+}
+
+.logoTop {
+    width: 120px;
+    height: 40px;
+    object-fit: cover;
+}
+
+.slideText {
+    position: relative;
+    @extend %flexItemCenter;
+    gap: 10px;
+
+    &::after,
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        translate: 0 -50%;
+        width: 50px;
+        height: 20px;
+    }
+
+    &::after {
+        left: 33px;
+        background: linear-gradient(
+            90deg,
+            #00432a 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+
+    &::before {
+        right: 0;
+        background: linear-gradient(
+            270deg,
+            #00432a 0%,
+            rgba(255, 255, 255, 0) 100%
+        );
+    }
+}
+
+.textTop {
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.62;
+}
+
+.textColor {
+    color: #ffe81a;
+}
+
+.action {
+    @extend %flexItemCenter;
+    gap: 20px;
+}
+
+.actionBtn {
+    @extend %flexItemCenter;
+    gap: 10px;
+}
+
+.btnSignIn {
+    border: 1px solid #ffe81a;
+
+    &:hover {
+        background: #ffe81a;
+        color: #00432a;
+    }
+}
+
+.btnSignUp {
+    background-image: url(../../assets/img/btn-signUp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.actionLanguage {
+    @extend %flexItemCenter;
+    gap: 3px;
+    padding-left: 12px;
+    border-left: 1px solid #ffe81a;
+    cursor: pointer;
+}
+
+.flag {
+    width: 34px;
+    height: 23px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ffe81a;
+}
+
+.actionProfile {
+    position: relative;
+    @extend %flexItemCenter;
+    gap: 10px;
+}
+
+.actionDropdown {
+    display: none;
+    position: absolute;
+    bottom: -126px;
+    right: -24px;
+    width: 240px;
+    height: 112px;
+    padding: 16px;
+    background: #fff;
+    z-index: 1;
+    border-radius: 15px;
+
+    &:hover {
+        display: block;
+    }
+}
+
+.dropdownPoligon {
+    position: absolute;
+    top: -10px;
+    right: 23px;
+}
+
+.dropdownLink {
+    @extend %flexItemCenter;
+    gap: 10px;
+
+    &:last-child {
+        margin-top: 20px;
+        padding-top: 10px;
+        border-top: 1px solid #000;
+    }
+}
+
+.dropdownText {
+    font-size: 1.4rem;
+    line-height: 1.57;
+}
+
+.money {
+    @extend %flexItemCenter;
+    gap: 3px;
+    color: #ffe81a;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.avatarAction {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    cursor: pointer;
+
+    &:hover ~ .actionDropdown {
+        display: block;
+    }
+}
+
+// Navbar
+.navbar {
+    padding: 10px 0;
+    background: linear-gradient(90deg, #007534 0%, #009643 41%, #006c30 100%);
+}
+
+.navbarInner {
+    @extend %flexItemCenter;
+    gap: 30px;
+}
+
+.menuItem {
+    position: relative;
+    @extend %flexItemCenter;
+    gap: 5px;
+    padding: 6px 12px;
+    border-radius: 8px;
+
+    color: #ffe81a;
+    font-weight: 600;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: all 0.25s;
+
+    &:hover {
+        background: #ffe81a;
+        color: #00432a;
+    }
+}
+
+.menuIcon {
+    position: absolute;
+    top: -6px;
+    right: 0;
+}

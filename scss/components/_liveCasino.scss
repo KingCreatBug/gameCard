@@ -1,0 +1,54 @@
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.liveCasino {
+    margin-top: 30px;
+}
+
+.liveCasinoGames {
+    margin-top: 30px;
+    @extend %flexItemCenter;
+}
+
+.liveCasinoBg {
+    width: 597px;
+    height: 482px;
+    object-fit: cover;
+}
+
+.gamesCasino {
+    margin-left: -20px;
+}
+
+.gamesLarge,
+.gamesSmall {
+    display: grid;
+
+    gap: 20px;
+}
+
+.gamesLarge {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gamesSmall {
+    margin-top: 20px;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.GameLargeImg,
+.gameSmallImg {
+    width: 100%;
+
+    border-radius: 15px;
+}
+
+.GameLargeImg {
+    height: 237px;
+}
+
+.gameSmallImg {
+    height: 164px;
+}

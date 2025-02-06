@@ -1,0 +1,30 @@
+.intro {
+    margin-top: 30px;
+    padding: 30px 0;
+    background: #cdf5dd;
+}
+
+.introConatiner {
+    padding: 40px;
+    background-image: url(../../assets/img/intro.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+}
+
+.introText {
+    width: 504px;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.46;
+}
+
+.introColor {
+    color: #ffda55;
+}
+
+.introBtn {
+    margin-top: 56px;
+    border: 1px solid #ffda55;
+}

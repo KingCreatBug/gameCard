@@ -1,0 +1,896 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  background: var(--primaryColor);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}
+
+a,
+img,
+button,
+input,
+label,
+textarea,
+select {
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  outline: none;
+  border: none;
+}
+
+input,
+textarea {
+  background: transparent;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active,
+input:-webkit-autofill:hover {
+  transition: background-color 1s 99999s;
+  -webkit-text-fill-color: var(--Text-Color-Dark);
+  caret-color: var(--Text-Color-Dark);
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+b,
+strong {
+  font-weight: 600;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.d-grid {
+  display: grid !important;
+}
+
+.d-none {
+  display: none !important;
+}
+
+@media (max-width: 1439.98px) {
+  .d-xxl-block {
+    display: block !important;
+  }
+  .d-xxl-flex {
+    display: flex !important;
+  }
+  .d-xxl-grid {
+    display: grid !important;
+  }
+  .d-xxl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  .d-xl-block {
+    display: block !important;
+  }
+  .d-xl-flex {
+    display: flex !important;
+  }
+  .d-xl-grid {
+    display: grid !important;
+  }
+  .d-xl-none {
+    display: none !important;
+  }
+}
+@media (max-width: 991.98px) {
+  .d-lg-block {
+    display: block !important;
+  }
+  .d-lg-flex {
+    display: flex !important;
+  }
+  .d-lg-grid {
+    display: grid !important;
+  }
+  .d-lg-none {
+    display: none !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .d-md-block {
+    display: block !important;
+  }
+  .d-md-flex {
+    display: flex !important;
+  }
+  .d-md-grid {
+    display: grid !important;
+  }
+  .d-md-none {
+    display: none !important;
+  }
+}
+@media (max-width: 575.98px) {
+  .d-sm-block {
+    display: block !important;
+  }
+  .d-sm-flex {
+    display: flex !important;
+  }
+  .d-sm-grid {
+    display: grid !important;
+  }
+  .d-sm-none {
+    display: none !important;
+  }
+}
+html {
+  --primaryColor: "#f6f6f6";
+}
+
+.menuItem, .navbarInner, .money, .dropdownLink, .actionProfile, .actionLanguage, .actionBtn, .action, .slideText, .HeaderTopInner {
+  display: flex;
+  align-items: center;
+}
+
+.headerTop {
+  background: #00432a;
+  padding: 10px 0;
+}
+
+.HeaderTopInner {
+  justify-content: space-between;
+}
+
+.logoTop {
+  width: 120px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.slideText {
+  position: relative;
+  gap: 10px;
+}
+.slideText::after, .slideText::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  translate: 0 -50%;
+  width: 50px;
+  height: 20px;
+}
+.slideText::after {
+  left: 33px;
+  background: linear-gradient(90deg, #00432a 0%, rgba(255, 255, 255, 0) 100%);
+}
+.slideText::before {
+  right: 0;
+  background: linear-gradient(270deg, #00432a 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.textTop {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.62;
+}
+
+.textColor {
+  color: #ffe81a;
+}
+
+.action {
+  gap: 20px;
+}
+
+.actionBtn {
+  gap: 10px;
+}
+
+.btnSignIn {
+  border: 1px solid #ffe81a;
+}
+.btnSignIn:hover {
+  background: #ffe81a;
+  color: #00432a;
+}
+
+.btnSignUp {
+  background-image: url(../../assets/img/btn-signUp.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.btnSignUp:hover {
+  opacity: 0.8;
+}
+
+.actionLanguage {
+  gap: 3px;
+  padding-left: 12px;
+  border-left: 1px solid #ffe81a;
+  cursor: pointer;
+}
+
+.flag {
+  width: 34px;
+  height: 23px;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #ffe81a;
+}
+
+.actionProfile {
+  position: relative;
+  gap: 10px;
+}
+
+.actionDropdown {
+  display: none;
+  position: absolute;
+  bottom: -126px;
+  right: -24px;
+  width: 240px;
+  height: 112px;
+  padding: 16px;
+  background: #fff;
+  z-index: 1;
+  border-radius: 15px;
+}
+.actionDropdown:hover {
+  display: block;
+}
+
+.dropdownPoligon {
+  position: absolute;
+  top: -10px;
+  right: 23px;
+}
+
+.dropdownLink {
+  gap: 10px;
+}
+.dropdownLink:last-child {
+  margin-top: 20px;
+  padding-top: 10px;
+  border-top: 1px solid #000;
+}
+
+.dropdownText {
+  font-size: 1.4rem;
+  line-height: 1.57;
+}
+
+.money {
+  gap: 3px;
+  color: #ffe81a;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.avatarAction {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.avatarAction:hover ~ .actionDropdown {
+  display: block;
+}
+
+.navbar {
+  padding: 10px 0;
+  background: linear-gradient(90deg, #007534 0%, #009643 41%, #006c30 100%);
+}
+
+.navbarInner {
+  gap: 30px;
+}
+
+.menuItem {
+  position: relative;
+  gap: 5px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #ffe81a;
+  font-weight: 600;
+  line-height: 1.5;
+  cursor: pointer;
+  transition: all 0.25s;
+}
+.menuItem:hover {
+  background: #ffe81a;
+  color: #00432a;
+}
+
+.menuIcon {
+  position: absolute;
+  top: -6px;
+  right: 0;
+}
+
+.footerSocialsList, .footerSocials, .footerCopyright, .footerCertificate, .footerTopImgs {
+  display: flex;
+  align-items: center;
+}
+
+.footerTop {
+  padding: 30px 0;
+  background: #cdf5dd;
+}
+
+.footerTopImgs {
+  gap: 40px;
+}
+
+.footerLogo {
+  width: 143px;
+  height: 48px;
+  object-fit: cover;
+}
+
+.footerSeparate {
+  width: 1px;
+  height: 68px;
+  background: #76e4c5;
+}
+
+.footerCertificate {
+  gap: 10px;
+}
+
+.footerImg {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+}
+
+.footerListText {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.footerText {
+  color: #185745;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.footerBot {
+  background: #003f19;
+}
+
+.footerBotList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.footerHeading {
+  color: #fff;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.footerList {
+  margin-top: 20px;
+}
+
+.footerItem {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.57;
+  cursor: pointer;
+}
+.footerItem:hover {
+  color: #fff;
+}
+
+.footerItem + .footerItem {
+  margin-top: 15px;
+}
+
+.footerCopyright {
+  justify-content: space-between;
+  padding: 16px 0;
+  border-top: 1px solid #fff;
+}
+
+.footerSocials {
+  gap: 16px;
+}
+
+.footerTetx {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+.footerSocialsList {
+  gap: 10px;
+}
+
+.slides {
+  position: relative;
+  height: 445px;
+  background: rgb(3, 35, 6);
+}
+
+.slidesICon {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.slidesICon:hover {
+  opacity: 1;
+}
+
+.slidesICon.left {
+  left: 40px;
+}
+
+.slidesICon.right {
+  right: 40px;
+  rotate: 180deg;
+}
+
+.bannerImg {
+  width: 1193px;
+  height: 445px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.sportColData, .sportRow, .sportTeam, .sportTeams, .sportTopbox, .sportTopLeft, .sportTop, .sport {
+  display: flex;
+  align-items: center;
+}
+
+.sport {
+  position: relative;
+  gap: 20px;
+  margin-top: -80px;
+  overflow: hidden;
+}
+
+.sportItem {
+  padding: 8px;
+  border-radius: 15px;
+  background: #f0f0f0;
+}
+
+.sportTop {
+  gap: 8px;
+  overflow: hidden;
+}
+
+.sportTopLeft {
+  gap: 20px;
+  background: rgb(59, 217, 172);
+  padding: 5px 8px;
+  border-radius: 15px;
+}
+
+.sportTopbox {
+  gap: 5px;
+}
+
+.sportTopLeftTetx {
+  color: #185745;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+.sportTopLeftTetx .now {
+  color: #ff555f;
+}
+
+.sportTeams {
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.sportTeam {
+  gap: 5px;
+}
+
+.sportName {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.sportTeamLogo {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.sportBot {
+  margin-top: 18px;
+  padding: 0 8px;
+}
+
+.sportRow {
+  justify-content: space-between;
+}
+
+.sportRow + .sportRow {
+  margin-top: 4px;
+}
+
+.sportColData {
+  width: 95px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.sportColDataText {
+  color: #000;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.sportColData .green {
+  color: #74cf00;
+}
+
+.sportColData .red {
+  color: #ff555f;
+}
+
+.sportText {
+  padding: 5px;
+  text-align: center;
+  color: #185745;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  border-radius: 4px;
+  background: linear-gradient(90deg, rgba(211, 211, 211, 0) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  color: #ffe81a;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  border-radius: 99px;
+  transition: 0.25s all;
+}
+
+.contentHeader, .content {
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  justify-content: space-between;
+}
+
+.contentHeader {
+  gap: 10px;
+  color: #185745;
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: 1.38;
+}
+
+.contentLink {
+  color: #185745;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.contentLink:hover {
+  text-decoration: underline;
+}
+
+.liveCasinoGames {
+  display: flex;
+  align-items: center;
+}
+
+.liveCasino {
+  margin-top: 30px;
+}
+
+.liveCasinoGames {
+  margin-top: 30px;
+}
+
+.liveCasinoBg {
+  width: 597px;
+  height: 482px;
+  object-fit: cover;
+}
+
+.gamesCasino {
+  margin-left: -20px;
+}
+
+.gamesLarge,
+.gamesSmall {
+  display: grid;
+  gap: 20px;
+}
+
+.gamesLarge {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gamesSmall {
+  margin-top: 20px;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.GameLargeImg,
+.gameSmallImg {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.GameLargeImg {
+  height: 237px;
+}
+
+.gameSmallImg {
+  height: 164px;
+}
+
+.topGames {
+  padding: 60px 0 30px;
+  background: #cdf5dd;
+}
+
+.featureGames {
+  margin-top: 30px;
+}
+
+.games {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gameImg {
+  width: 388px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.intro {
+  margin-top: 30px;
+  padding: 30px 0;
+  background: #cdf5dd;
+}
+
+.introConatiner {
+  padding: 40px;
+  background-image: url(../../assets/img/intro.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.introText {
+  width: 504px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.46;
+}
+
+.introColor {
+  color: #ffda55;
+}
+
+.introBtn {
+  margin-top: 56px;
+  border: 1px solid #ffda55;
+}
+
+/*# sourceMappingURL=main.css.map */

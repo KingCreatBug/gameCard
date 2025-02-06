@@ -1,0 +1,33 @@
+.slides {
+    position: relative;
+    height: 445px;
+    background: rgb(3, 35, 6);
+}
+
+.slidesICon {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    opacity: 0.8;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.slidesICon.left {
+    left: 40px;
+}
+
+.slidesICon.right {
+    right: 40px;
+    rotate: 180deg;
+}
+
+.bannerImg {
+    width: 1193px;
+    height: 445px;
+    object-fit: cover;
+    margin: 0 auto;
+}

@@ -1,0 +1,26 @@
+.topGames {
+  padding: 60px 0 30px;
+  background: #cdf5dd;
+}
+
+.featureGames {
+  margin-top: 30px;
+}
+
+.games {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.gameImg {
+  width: 388px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/*# sourceMappingURL=game.css.map */

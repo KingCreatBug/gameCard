@@ -1,0 +1,28 @@
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.content {
+    @extend %flexItemCenter;
+    justify-content: space-between;
+}
+
+.contentHeader {
+    @extend %flexItemCenter;
+    gap: 10px;
+    color: #185745;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.38;
+}
+
+.contentLink {
+    color: #185745;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
