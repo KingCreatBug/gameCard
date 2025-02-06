@@ -182,6 +182,7 @@
 }
 
 .navDropdown {
+    transform: translateX(-100%);
     position: absolute;
     overflow: hidden;
     top: 65px;

@@ -465,6 +465,7 @@ html {
 }
 
 .navDropdown {
+  transform: translateX(-100%);
   position: absolute;
   overflow: hidden;
   top: 65px;
@@ -697,7 +698,7 @@ html {
   white-space: nowrap;
 }
 
-.sportTopLeftTetx .now {
+.sportTopLeftTetx.now {
   color: #ff555f;
 }
 
