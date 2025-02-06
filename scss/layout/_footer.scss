@@ -109,3 +109,14 @@
     @extend %flexItemCenter;
     gap: 10px;
 }
+
+.footerSocial {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

@@ -468,7 +468,7 @@ html {
   transform: translateX(-100%);
   position: absolute;
   overflow: hidden;
-  top: 65px;
+  top: 64px;
   left: 0;
   width: 100%;
   justify-content: center;
@@ -624,6 +624,16 @@ html {
   gap: 10px;
 }
 
+.footerSocial {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.footerSocial:hover {
+  opacity: 0.8;
+}
+
 .slides {
   position: relative;
   height: 445px;
@@ -657,6 +667,37 @@ html {
   margin: 0 auto;
 }
 
+.banner {
+  position: relative;
+}
+
+.bannerPageImg {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.bannerContent {
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  translate: 0 -50%;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.48;
+  background: linear-gradient(0deg, #c08b02 21.03%, #ffd933 43.04%, #ffdc39 44.65%, #ffe144 64.17%, #ffea32 85.94%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bannerContentLarge {
+  font-size: 4.2rem;
+  font-weight: 700;
+  line-height: 1.43;
+  text-transform: uppercase;
+}
+
 .sportColData, .sportRow, .sportTeam, .sportTeams, .sportTopbox, .sportTopLeft, .sportTop, .sport {
   display: flex;
   align-items: center;
@@ -675,8 +716,16 @@ html {
   background: #f0f0f0;
 }
 
+.sportItem.large {
+  padding: 16px;
+}
+
+.sportItem.large + .sportItem.large {
+  margin-top: 20px;
+}
+
 .sportTop {
-  gap: 8px;
+  justify-content: space-between;
   overflow: hidden;
 }
 
@@ -685,6 +734,10 @@ html {
   background: rgb(59, 217, 172);
   padding: 5px 8px;
   border-radius: 15px;
+}
+
+.sportTopLeft.large {
+  gap: 80px;
 }
 
 .sportTopbox {
@@ -711,6 +764,10 @@ html {
   gap: 5px;
 }
 
+.sportTeam.large {
+  gap: 50px;
+}
+
 .sportName {
   color: #000;
   font-size: 1rem;
@@ -718,10 +775,19 @@ html {
   line-height: 1.6;
 }
 
+.sportName.large {
+  font-size: 1.2rem;
+}
+
 .sportTeamLogo {
   width: 24px;
   height: 24px;
   object-fit: cover;
+}
+
+.sportTeamLogo.large {
+  width: 32px;
+  height: 32px;
 }
 
 .sportBot {
@@ -743,6 +809,11 @@ html {
   padding: 5px 10px;
   border-radius: 5px;
   background: #fff;
+  flex-shrink: 0;
+}
+
+.sportColData.large {
+  width: 125px;
 }
 
 .sportColDataText {
@@ -766,6 +837,7 @@ html {
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.5;
+  width: 100%;
   border-radius: 4px;
   background: linear-gradient(90deg, rgba(211, 211, 211, 0) 0%, rgba(211, 211, 211, 0.5) 50%, rgba(211, 211, 211, 0) 100%);
 }
@@ -920,6 +992,130 @@ html {
 .introBtn {
   margin-top: 56px;
   border: 1px solid #ffda55;
+}
+
+.fixed {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  translate: 0 -50%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px 10px;
+  border-radius: 12px 0px 0px 12px;
+  background: #fff;
+  box-shadow: 0px 4px 12px 0px rgba(7, 27, 79, 0.08);
+}
+
+.fixedSocial {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+.fixedSocial:hover {
+  scale: 1.06;
+}
+
+.sportCol, .sportRole, .sportRoleHeading, .sportContainerBot, .sportContainer {
+  display: flex;
+  align-items: center;
+}
+
+.sportContainer {
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.sportLinkLarge {
+  width: 430px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.sportContainerSmall {
+  display: grid;
+  grid-template-columns: repeat(2, 52%);
+  gap: 20px;
+}
+
+.sportLinkSmall {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.sportContainerBot {
+  gap: 20px;
+  margin: 60px 0;
+}
+
+.sportContainerLeft {
+  width: 31%;
+}
+
+.sportTable {
+  width: 69%;
+  border: 1px solid #003f19;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.sportRoleHeading {
+  justify-content: space-between;
+  padding: 8px;
+  background: #003f19;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.sportRole {
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.sportRole {
+  border-top: 1px solid #003f19;
+}
+
+.sportCol {
+  width: 20%;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sportCol.time {
+  color: #185745;
+  font-size: 1.2rem;
+  line-height: 2;
+}
+
+.sportCol.data {
+  gap: 4px;
+}
+
+.sportData {
+  padding: 4px 12px;
+  border-radius: 4px;
+  background: rgba(209, 210, 211, 0.2);
+  color: #626262;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.sportData.green {
+  color: #467c00;
+  border: 1px solid #e8e8e8;
+}
+
+.sportData.red {
+  color: #ff555f;
 }
 
 /*# sourceMappingURL=main.css.map */

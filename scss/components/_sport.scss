@@ -17,9 +17,17 @@
     background: #f0f0f0;
 }
 
+.sportItem.large {
+    padding: 16px;
+}
+
+.sportItem.large + .sportItem.large {
+    margin-top: 20px;
+}
+
 .sportTop {
     @extend %flexItemCenter;
-    gap: 8px;
+    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -29,6 +37,10 @@
     background: rgb(59, 217, 172);
     padding: 5px 8px;
     border-radius: 15px;
+}
+
+.sportTopLeft.large {
+    gap: 80px;
 }
 
 .sportTopbox {
@@ -58,6 +70,10 @@
     gap: 5px;
 }
 
+.sportTeam.large {
+    gap: 50px;
+}
+
 .sportName {
     color: #000;
     font-size: 1rem;
@@ -65,10 +81,19 @@
     line-height: 1.6;
 }
 
+.sportName.large {
+    font-size: 1.2rem;
+}
+
 .sportTeamLogo {
     width: 24px;
     height: 24px;
     object-fit: cover;
+}
+
+.sportTeamLogo.large {
+    width: 32px;
+    height: 32px;
 }
 
 .sportBot {
@@ -92,6 +117,11 @@
     padding: 5px 10px;
     border-radius: 5px;
     background: #fff;
+    flex-shrink: 0;
+}
+
+.sportColData.large {
+    width: 125px;
 }
 
 .sportColDataText {
@@ -116,6 +146,7 @@
     font-size: 1rem;
     font-weight: 700;
     line-height: 1.5;
+    width: 100%;
 
     border-radius: 4px;
     background: linear-gradient(

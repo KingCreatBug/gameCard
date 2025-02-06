@@ -31,3 +31,43 @@
     object-fit: cover;
     margin: 0 auto;
 }
+
+.banner {
+    position: relative;
+}
+
+.bannerPageImg {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.bannerContent {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    translate: 0 -50%;
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.48;
+
+    background: linear-gradient(
+        0deg,
+        #c08b02 21.03%,
+        #ffd933 43.04%,
+        #ffdc39 44.65%,
+        #ffe144 64.17%,
+        #ffea32 85.94%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bannerContentLarge {
+    font-size: 4.2rem;
+    font-weight: 700;
+    line-height: 1.43;
+    text-transform: uppercase;
+}
