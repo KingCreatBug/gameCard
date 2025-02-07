@@ -150,7 +150,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
-  background: var(--primaryColor);
+  background: #f6f6f6;
 }
 
 a {
@@ -1311,6 +1311,61 @@ html {
 }
 .promotionBtn.end:hover {
   opacity: 1;
+}
+
+.promotion {
+  margin: 30px 0 60px;
+  background: #fff;
+  border-radius: 15px 15px 0 0;
+  overflow: hidden;
+}
+
+.promotionBanner {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.promotionDetailContent {
+  padding: 30px 60px;
+}
+
+.promotionHeading {
+  color: #185745;
+  font-family: Inter;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.62;
+}
+
+.promotionDetailDesc {
+  margin-top: 24px;
+  color: #626262;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.promotionDetailDesc.box {
+  margin-top: 8px;
+}
+
+.promotionColor {
+  font-weight: 700;
+}
+
+.promotionBoxContent {
+  margin-top: 16px;
+}
+
+.promotionTitle {
+  color: #626262;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.46;
+}
+
+.promotionColorLink {
+  color: #0071e3;
 }
 
 /*# sourceMappingURL=main.css.map */
