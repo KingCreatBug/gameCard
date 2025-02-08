@@ -71,6 +71,15 @@
     &:focus {
         border-color: #00432a;
     }
+
+    &.formProfile {
+        border: 1px solid #00432a;
+
+        &::placeholder {
+            color: #000;
+            opacity: 1;
+        }
+    }
 }
 
 .formIcon {

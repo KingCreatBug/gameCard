@@ -1217,6 +1217,13 @@ html {
 .formInput:focus {
   border-color: #00432a;
 }
+.formInput.formProfile {
+  border: 1px solid #00432a;
+}
+.formInput.formProfile::placeholder {
+  color: #000;
+  opacity: 1;
+}
 
 .formIcon {
   position: absolute;
@@ -1694,6 +1701,16 @@ html {
 .topUpContainer,
 .withDrawContainer {
   margin-top: 10px;
+}
+
+.profileContainer {
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+.profileContainer.active {
+  display: grid;
 }
 
 .topUpCta {

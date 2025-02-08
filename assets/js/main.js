@@ -137,6 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const withDrawBtn = document.querySelector(".topUpBtn:nth-child(2)"); // Rút BGold
     const topUpContainer = document.querySelector(".topUpContainer"); // Khu vực Nạp BGold
     const withDrawContainer = document.querySelector(".withDrawContainer"); // Khu vực Rút BGold
+    const profileContainer = document.querySelector(".profileContainer"); // Khu vực Profile
 
     // Các nút và form của "Nạp BGold"
     const topUpSmsBtn = document.querySelector(".topUpCtaBtn:nth-child(1)"); // Nạp qua SMS
@@ -144,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const topUpSmsForm = document.querySelector(".formTopUp.sms"); // Form SMS (Nạp)
     const topUpAtmForm = document.querySelector(".formTopUp.atm"); // Form ATM (Nạp)
 
-    // 🔹 Các nút và form của "Rút BGold"
+    // Các nút và form của "Rút BGold"
     const withDrawSmsBtn = document.querySelector(
         ".withDrawCtaBtn:nth-child(1)"
     ); // Rút qua SMS
@@ -154,35 +155,50 @@ document.addEventListener("DOMContentLoaded", function () {
     const withDrawSmsForm = document.querySelector(".formWithDraw.sms"); // Form SMS (Rút)
     const withDrawAtmForm = document.querySelector(".formWithDraw.atm"); // Form ATM (Rút)
 
-    // ✅ Mặc định hiển thị "Nạp BGold" và "SMS"
+    // Mặc định hiển thị "Nạp BGold" và "SMS"
     topUpBtn.classList.add("active");
     topUpContainer.style.display = "block";
     withDrawContainer.style.display = "none";
+    profileContainer.style.display = "none"; // Ẩn phần profile khi bắt đầu
 
     topUpSmsBtn.classList.add("active");
     topUpSmsForm.style.display = "grid";
     topUpAtmForm.style.display = "none";
-
-    withDrawSmsBtn.classList.add("active");
-    withDrawSmsForm.style.display = "grid";
+    withDrawSmsForm.style.display = "none";
     withDrawAtmForm.style.display = "none";
 
-    //  Xử lý sự kiện khi nhấn "Nạp BGold"
+    // Xử lý sự kiện khi nhấn "Nạp BGold"
     topUpBtn.addEventListener("click", function () {
         topUpBtn.classList.add("active");
         withDrawBtn.classList.remove("active");
-
+        profileContainer.style.display = "none"; // Ẩn Profile
         topUpContainer.style.display = "block";
         withDrawContainer.style.display = "none";
     });
 
-    // 🔹 Xử lý sự kiện khi nhấn "Rút BGold"
+    // Xử lý sự kiện khi nhấn "Rút BGold"
     withDrawBtn.addEventListener("click", function () {
         withDrawBtn.classList.add("active");
         topUpBtn.classList.remove("active");
-
+        profileContainer.style.display = "none"; // Ẩn Profile
         topUpContainer.style.display = "none";
         withDrawContainer.style.display = "block";
+
+        // Tự động kích hoạt Rút qua SMS
+        withDrawSmsBtn.classList.add("active");
+        withDrawAtmBtn.classList.remove("active");
+        withDrawSmsForm.style.display = "grid";
+        withDrawAtmForm.style.display = "none";
+    });
+
+    // Xử lý sự kiện khi nhấn "Profile"
+    const profile = document.querySelector(".profile"); // Tìm phần tử profile
+    profile.addEventListener("click", function () {
+        // Ẩn các phần khác và chỉ hiển thị profile
+        topUpContainer.style.display = "none";
+        withDrawContainer.style.display = "none";
+        profileContainer.style.display = "grid";
+        topUpBtn.classList.remove("active");
     });
 
     // Xử lý sự kiện khi nhấn "SMS" trong "Nạp BGold"
@@ -203,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
         topUpSmsForm.style.display = "none";
     });
 
-    // 🔹 Xử lý sự kiện khi nhấn "SMS" trong "Rút BGold"
+    //  Xử lý sự kiện khi nhấn "SMS" trong "Rút BGold"
     withDrawSmsBtn.addEventListener("click", function () {
         withDrawSmsBtn.classList.add("active");
         withDrawAtmBtn.classList.remove("active");
@@ -212,7 +228,7 @@ document.addEventListener("DOMContentLoaded", function () {
         withDrawAtmForm.style.display = "none";
     });
 
-    // 🔹 Xử lý sự kiện khi nhấn "ATM" trong "Rút BGold"
+    //  Xử lý sự kiện khi nhấn "ATM" trong "Rút BGold"
     withDrawAtmBtn.addEventListener("click", function () {
         withDrawAtmBtn.classList.add("active");
         withDrawSmsBtn.classList.remove("active");

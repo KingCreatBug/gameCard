@@ -51,6 +51,17 @@
     margin-top: 10px;
 }
 
+.profileContainer {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+
+    &.active {
+        display: grid;
+    }
+}
+
 .topUpCta {
     @extend %flexItemCenter;
     gap: 15px;
