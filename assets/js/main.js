@@ -91,3 +91,133 @@ document.addEventListener("DOMContentLoaded", function () {
         navDropdown.style.transform = "translateX(-100%)";
     });
 });
+
+// Login
+document.addEventListener("DOMContentLoaded", function () {
+    const signUpBtn = document.querySelector(".btnSignUp");
+    const signInBtn = document.querySelector(".btnSignIn");
+    const signUpModal = document.querySelector(".modal.signUp");
+    const signInModal = document.querySelector(".modal.signIn");
+    const overlays = document.querySelectorAll(".overlay");
+
+    // Mở modal Đăng ký
+    if (signUpBtn && signUpModal) {
+        signUpBtn.addEventListener("click", function () {
+            signUpModal.style.display = "flex";
+        });
+    }
+
+    // Mở modal Đăng nhập
+    if (signInBtn && signInModal) {
+        signInBtn.addEventListener("click", function () {
+            signInModal.style.display = "flex";
+        });
+    }
+
+    // Đóng modal khi nhấn vào overlay
+    overlays.forEach((overlay) => {
+        overlay.addEventListener("click", function () {
+            signUpModal.style.display = "none";
+            signInModal.style.display = "none";
+        });
+    });
+
+    // Đóng modal khi nhấn phím ESC
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            signUpModal.style.display = "none";
+            signInModal.style.display = "none";
+        }
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Các phần tử trong "Nạp BGold" và "Rút BGold"
+    const topUpBtn = document.querySelector(".topUpBtn:nth-child(1)"); // Nạp BGold
+    const withDrawBtn = document.querySelector(".topUpBtn:nth-child(2)"); // Rút BGold
+    const topUpContainer = document.querySelector(".topUpContainer"); // Khu vực Nạp BGold
+    const withDrawContainer = document.querySelector(".withDrawContainer"); // Khu vực Rút BGold
+
+    // Các nút và form của "Nạp BGold"
+    const topUpSmsBtn = document.querySelector(".topUpCtaBtn:nth-child(1)"); // Nạp qua SMS
+    const topUpAtmBtn = document.querySelector(".topUpCtaBtn:nth-child(2)"); // Nạp qua ATM
+    const topUpSmsForm = document.querySelector(".formTopUp.sms"); // Form SMS (Nạp)
+    const topUpAtmForm = document.querySelector(".formTopUp.atm"); // Form ATM (Nạp)
+
+    // 🔹 Các nút và form của "Rút BGold"
+    const withDrawSmsBtn = document.querySelector(
+        ".withDrawCtaBtn:nth-child(1)"
+    ); // Rút qua SMS
+    const withDrawAtmBtn = document.querySelector(
+        ".withDrawCtaBtn:nth-child(2)"
+    ); // Rút qua ATM
+    const withDrawSmsForm = document.querySelector(".formWithDraw.sms"); // Form SMS (Rút)
+    const withDrawAtmForm = document.querySelector(".formWithDraw.atm"); // Form ATM (Rút)
+
+    // ✅ Mặc định hiển thị "Nạp BGold" và "SMS"
+    topUpBtn.classList.add("active");
+    topUpContainer.style.display = "block";
+    withDrawContainer.style.display = "none";
+
+    topUpSmsBtn.classList.add("active");
+    topUpSmsForm.style.display = "grid";
+    topUpAtmForm.style.display = "none";
+
+    withDrawSmsBtn.classList.add("active");
+    withDrawSmsForm.style.display = "grid";
+    withDrawAtmForm.style.display = "none";
+
+    //  Xử lý sự kiện khi nhấn "Nạp BGold"
+    topUpBtn.addEventListener("click", function () {
+        topUpBtn.classList.add("active");
+        withDrawBtn.classList.remove("active");
+
+        topUpContainer.style.display = "block";
+        withDrawContainer.style.display = "none";
+    });
+
+    // 🔹 Xử lý sự kiện khi nhấn "Rút BGold"
+    withDrawBtn.addEventListener("click", function () {
+        withDrawBtn.classList.add("active");
+        topUpBtn.classList.remove("active");
+
+        topUpContainer.style.display = "none";
+        withDrawContainer.style.display = "block";
+    });
+
+    // Xử lý sự kiện khi nhấn "SMS" trong "Nạp BGold"
+    topUpSmsBtn.addEventListener("click", function () {
+        topUpSmsBtn.classList.add("active");
+        topUpAtmBtn.classList.remove("active");
+
+        topUpSmsForm.style.display = "grid";
+        topUpAtmForm.style.display = "none";
+    });
+
+    //  Xử lý sự kiện khi nhấn "ATM" trong "Nạp BGold"
+    topUpAtmBtn.addEventListener("click", function () {
+        topUpAtmBtn.classList.add("active");
+        topUpSmsBtn.classList.remove("active");
+
+        topUpAtmForm.style.display = "flex";
+        topUpSmsForm.style.display = "none";
+    });
+
+    // 🔹 Xử lý sự kiện khi nhấn "SMS" trong "Rút BGold"
+    withDrawSmsBtn.addEventListener("click", function () {
+        withDrawSmsBtn.classList.add("active");
+        withDrawAtmBtn.classList.remove("active");
+
+        withDrawSmsForm.style.display = "grid";
+        withDrawAtmForm.style.display = "none";
+    });
+
+    // 🔹 Xử lý sự kiện khi nhấn "ATM" trong "Rút BGold"
+    withDrawAtmBtn.addEventListener("click", function () {
+        withDrawAtmBtn.classList.add("active");
+        withDrawSmsBtn.classList.remove("active");
+
+        withDrawAtmForm.style.display = "grid";
+        withDrawSmsForm.style.display = "none";
+    });
+});

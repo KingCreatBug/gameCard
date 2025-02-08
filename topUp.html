@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Css -->
+        <link rel="stylesheet" href="./assets/css/main.css" />
+        <!-- Embed Fonts Inter -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Favicon -->
+        <link
+            rel="icon"
+            type="image/png"
+            href="assets/favicon/favicon-96x96.png"
+            sizes="96x96"
+        />
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href="assets/favicon/favicon.svg"
+        />
+        <link rel="shortcut icon" href="assets/favicon/favicon.ico" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/favicon/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="assets/favicon/site.webmanifest" />
+
+        <!-- Load -->
+        <script src="./assets/js/load.js"></script>
+        <title>99Bet | Top Up</title>
+    </head>
+    <body>
+        <!-- Header -->
+        <header id="header" class="header"></header>
+        <script>
+            load("#header", "./templates/header-login.html");
+        </script>
+        <!-- Main -->
+        <main class="container">
+            <div class="topUp">
+                <!-- Menu -->
+                <div class="topUpMenu">
+                    <div class="profile">
+                        <img
+                            src="./assets/img/avatar/avt1.png"
+                            alt=""
+                            class="profileAvt"
+                        />
+                        <h1 class="profileName">Imran Khan</h1>
+                    </div>
+
+                    <div>
+                        <div class="profileMoneyText">
+                            <img src="./assets/icons/walletGold.svg" alt="" />
+                            Số dư
+                        </div>
+                        <div class="profileMoneyText">
+                            200
+                            <img src="./assets/icons/bGold.svg" alt="" />
+                        </div>
+                    </div>
+
+                    <div class="topUpAction">
+                        <button class="topUpBtn active">
+                            <img src="./assets/icons/walletGreen.svg" alt="" />
+                            Nạp BGold
+                        </button>
+                        <button class="topUpBtn">
+                            <img src="./assets/icons/withDraw.svg" alt="" />
+                            Rút BGold
+                        </button>
+                    </div>
+                </div>
+
+                <div class="topUpContainer">
+                    <div>
+                        <div class="topUpCta">
+                            <button class="topUpCtaBtn">SMS</button>
+                            <button class="topUpCtaBtn">ATM</button>
+                        </div>
+
+                        <form action="" class="formTopUp sms">
+                            <div>
+                                <label for="nameCard" class="formLabel"
+                                    >Loại thẻ</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="nameCard"
+                                        type="text"
+                                        placeholder="Viettel"
+                                        name="nameCard"
+                                        class="formInput"
+                                    />
+                                    <img
+                                        src="./assets/icons/arrowDownBlack.svg"
+                                        alt=""
+                                        class="formIcon"
+                                    />
+                                </div>
+                                <p class="formError">
+                                    Vui lòng chọn loại thẻ của bạn
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="money" class="formLabel"
+                                    >Mệnh giá thẻ</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="money"
+                                        type="text"
+                                        placeholder="10.000 VND"
+                                        name="money"
+                                        class="formInput"
+                                    />
+                                </div>
+                                <p class="formError">
+                                    Vui lòng nhập mệnh giá tiền
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="series" class="formLabel"
+                                    >Số series thẻ</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="series"
+                                        type="text"
+                                        placeholder="0828277366217"
+                                        name="series"
+                                        class="formInput"
+                                    />
+                                </div>
+
+                                <p class="formError">
+                                    Vui lòng nhập số sesries
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="pin" class="formLabel"
+                                    >Mã thẻ (Pin)</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="pin"
+                                        type="text"
+                                        placeholder="0828277366217"
+                                        name="pin"
+                                        class="formInput"
+                                    />
+                                </div>
+                                <p class="formError">
+                                    Vui lòng chọn loại thẻ của bạn
+                                </p>
+                            </div>
+
+                            <button class="formTopUpBtn">Nạp tiền</button>
+                        </form>
+
+                        <form action="" class="formTopUp atm">
+                            <h2 class="formTopUpTitle">Quét mã QR</h2>
+                            <img src="./assets/img/ar.png" alt="" class="qr" />
+                            <p class="formTopUpTitle">Thông tin chuyển khoản</p>
+                            <div class="topUpContent">
+                                <p>Tên người nhận</p>
+                                <div class="topUpContentBox">
+                                    <p>Imramn Khan</p>
+                                    <button>
+                                        <img
+                                            src="./assets/icons/coppy.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="topUpContent">
+                                <p>Nội dung chuyển khoản</p>
+                                <div class="topUpContentBox">
+                                    <p>AE343231</p>
+                                    <button>
+                                        <img
+                                            src="./assets/icons/coppy.svg"
+                                            alt=""
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <div class="topUpBot">
+                            <h3 class="topUpTitle">*Note</h3>
+                            <p class="topUpNote">
+                                Nạp 10k = 15BGod và 1 ticket quay thưởng
+                            </p>
+                            <p class="topUpNote">
+                                Nạp 20k = 35BGod và 4 ticket quay thưởng
+                            </p>
+                            <p class="topUpNote">
+                                Nạp 50k = 99BGod và 8 ticket quay thưởng
+                            </p>
+                            <p class="topUpNote">
+                                Nạp 100k = 268BGod và 12 ticket quay thưởng
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="withDrawContainer">
+                    <div class="withDrawText">
+                        <div class="withDrawTextColor">
+                            <p>10</p>
+                            <img src="./assets/icons/bGold.svg" alt="" />
+                        </div>
+                        <p>= 10.000 VND</p>
+                    </div>
+
+                    <div>
+                        <div class="topUpCta">
+                            <button class="withDrawCtaBtn active">SMS</button>
+                            <button class="withDrawCtaBtn">ATM</button>
+                        </div>
+
+                        <form action="" class="formWithDraw sms">
+                            <div>
+                                <label for="nameCard" class="formLabel"
+                                    >Loại thẻ</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="nameCard"
+                                        type="text"
+                                        placeholder="Viettel"
+                                        name="nameCard"
+                                        class="formInput"
+                                    />
+                                    <img
+                                        src="./assets/icons/arrowDownBlack.svg"
+                                        alt=""
+                                        class="formIcon"
+                                    />
+                                </div>
+                                <p class="formError">
+                                    Vui lòng chọn loại thẻ của bạn
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="money" class="formLabel"
+                                    >Mệnh giá thẻ</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="money"
+                                        type="text"
+                                        placeholder="10.000 VND"
+                                        name="money"
+                                        class="formInput"
+                                    />
+                                </div>
+                                <p class="formError">
+                                    Vui lòng nhập mệnh giá tiền
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="series" class="formLabel"
+                                    >Nhập số điện thoại người nhận</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="series"
+                                        type="text"
+                                        placeholder="0828277366217"
+                                        name="series"
+                                        class="formInput"
+                                    />
+                                </div>
+
+                                <p class="formError">
+                                    Vui lòng điện thoại người nhận
+                                </p>
+                            </div>
+
+                            <div>
+                                <label for="otp" class="formLabel"
+                                    >Mã OTP</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="otp"
+                                        type="text"
+                                        placeholder="0828277366217"
+                                        name="otp"
+                                        class="formInput"
+                                    />
+                                </div>
+                                <p class="formError">Vui lòng nhập mã OTP</p>
+                            </div>
+
+                            <button class="formTopUpBtn">Rút tiền</button>
+                        </form>
+
+                        <form action="" class="formWithDraw atm">
+                            <div>
+                                <label for="nameBank" class="formLabel"
+                                    >Ngân hàng</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="nameBank"
+                                        type="text"
+                                        placeholder="Techcombank"
+                                        name="nameBank"
+                                        class="formInput"
+                                    />
+                                    <img
+                                        src="./assets/icons/arrowDownBlack.svg"
+                                        alt=""
+                                        class="formIcon"
+                                    />
+                                </div>
+                                <p class="formError">Vui lòng chọn ngân hàng</p>
+                            </div>
+
+                            <div>
+                                <label for="infoCard" class="formLabel"
+                                    >Thông tin thẻ</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="infoCard"
+                                        type="text"
+                                        placeholder="1234 4567 8901 2221"
+                                        name="infoCard"
+                                        class="formInput"
+                                    />
+                                </div>
+                                <p class="formError">Vui lòng nhập số thẻ</p>
+                            </div>
+
+                            <div>
+                                <label for="money" class="formLabel"
+                                    >Số tiền</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="money"
+                                        type="text"
+                                        placeholder="50.000 VND"
+                                        name="money"
+                                        class="formInput"
+                                    />
+                                </div>
+
+                                <p class="formError">Vui lòng nhập số tiền</p>
+                            </div>
+
+                            <div>
+                                <label for="otp" class="formLabel"
+                                    >Mã OTP</label
+                                >
+                                <div class="formInputBox">
+                                    <input
+                                        id="otp"
+                                        type="text"
+                                        placeholder="0828277366217"
+                                        name="otp"
+                                        class="formInput"
+                                    />
+                                </div>
+                                <p class="formError">Vui lòng nhập mã OTP</p>
+                            </div>
+
+                            <button class="formTopUpBtn">Rút tiền</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer id="footer" class="footer"></footer>
+        <script>
+            load("#footer", "./templates/footer.html");
+        </script>
+
+        <!-- Script -->
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>

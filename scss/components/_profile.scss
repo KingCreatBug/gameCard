@@ -1,0 +1,29 @@
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.profileAvt {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profileName {
+    color: #fff;
+    font-weight: 700;
+    line-height: 1.62;
+}
+
+.profileMoneyText {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: #ffe81a;
+    font-weight: 700;
+    line-height: 1.62;
+}

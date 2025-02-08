@@ -1,0 +1,131 @@
+%flexItemCenter {
+    display: flex;
+    align-items: center;
+}
+
+.topUp {
+    position: relative;
+    left: 50%;
+    translate: -50% 0;
+    width: 80%;
+    background: #fff;
+    padding: 30px;
+    margin: 30px 60px;
+    border-radius: 15px;
+}
+
+.topUpMenu {
+    padding: 10px 20px;
+    @extend %flexItemCenter;
+    justify-content: space-between;
+    border-radius: 999px;
+    background: #00432a;
+}
+
+.topUpAction {
+    @extend %flexItemCenter;
+    gap: 20px;
+}
+
+.topUpBtn {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 5px;
+
+    border-radius: 99px;
+    background: #fff;
+
+    color: #185745;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.62;
+
+    &.active {
+        background: #ffe81a;
+    }
+}
+
+.topUpContainer,
+.withDrawContainer {
+    margin-top: 10px;
+}
+
+.topUpCta {
+    @extend %flexItemCenter;
+    gap: 15px;
+}
+
+.topUpCtaBtn,
+.withDrawCtaBtn {
+    padding: 8px 16px;
+    border-radius: 99px;
+    border: 1px solid #00432a;
+
+    color: #00432a;
+    font-weight: 600;
+    line-height: 1.5;
+
+    &.active {
+        color: #fff;
+        background: #00432a;
+        box-shadow: 0px 0px 6px 0px #000 inset;
+    }
+}
+
+.qr {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.topUpContent {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: #185745;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.topUpContentBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.topUpBot {
+    margin-top: 30px;
+}
+
+.topUpTitle {
+    color: #185745;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.topUpNote {
+    margin-top: 12px;
+    font-size: 1.4rem;
+    line-height: 1.57;
+}
+
+// With draw
+.withDrawText {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 30px;
+    color: #185745;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.withDrawTextColor {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    color: #ffe81a;
+}

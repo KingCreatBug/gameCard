@@ -35,6 +35,10 @@
 
 .formGroup {
     width: 370px;
+
+    &.topUp {
+        width: 100%;
+    }
 }
 
 .formGroup + .formGroup {
@@ -53,7 +57,7 @@
     justify-content: space-between;
     padding: 15px;
     border-radius: 30px;
-    border: 1px solid #000;
+    border: 1px solid #ed4337;
 
     color: #000;
     font-size: 1.6rem;
@@ -87,7 +91,7 @@
 
 .formCheckbox {
     display: flex;
-    align-items: start;
+    align-items: center;
     gap: 5px;
     cursor: pointer;
 
@@ -121,6 +125,9 @@
 }
 
 .formBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-top: 30px;
     width: 100%;
     height: 60px;
@@ -141,5 +148,58 @@
 .formBot {
     margin-top: 20px;
     text-align: center;
+    line-height: 1.5;
+}
+
+// Top up
+.formTopUp,
+.formWithDraw {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+
+    &.active {
+        display: grid;
+    }
+
+    &.atm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.formLabel {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.44;
+    cursor: pointer;
+    color: #185745;
+}
+
+.formTopUpTitle {
+    color: #000;
+    text-align: center;
+    font-size: 3.6rem;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.formTopUpBtn {
+    width: 105px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 99px;
+    opacity: 0.6;
+    background: #00432a;
+
+    color: #fff;
+    font-weight: 600;
     line-height: 1.5;
 }
