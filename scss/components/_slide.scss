@@ -1,7 +1,19 @@
+@use "../abstracts";
+
 .slides {
     position: relative;
     height: 445px;
     background: rgb(3, 35, 6);
+
+    @include abstracts.screen(xl) {
+        height: 315px;
+    }
+
+    @include abstracts.screen(lg) {
+        height: auto;
+        background: initial;
+        margin: 0 10px;
+    }
 }
 
 .slidesICon {
@@ -10,6 +22,10 @@
     translate: 0 -50%;
     opacity: 0.8;
     cursor: pointer;
+
+    @include abstracts.screen(lg) {
+        display: none;
+    }
 
     &:hover {
         opacity: 1;
@@ -30,6 +46,19 @@
     height: 445px;
     object-fit: cover;
     margin: 0 auto;
+
+    @include abstracts.screen(xl) {
+        width: 850px;
+        height: 315px;
+    }
+
+    @include abstracts.screen(lg) {
+        background: rgb(3, 35, 6);
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border-radius: 15px;
+    }
 }
 
 .banner {

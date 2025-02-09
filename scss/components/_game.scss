@@ -1,10 +1,21 @@
+@use "../abstracts";
+
 .topGames {
     padding: 60px 0 30px;
     background: #cdf5dd;
+
+    @include abstracts.screen(lg) {
+        background: initial;
+        padding: 20px 0 10px;
+    }
 }
 
 .featureGames {
     margin-top: 30px;
+
+    @include abstracts.screen(lg) {
+        margin-top: 10px;
+    }
 }
 
 .games {
@@ -12,14 +23,28 @@
     overflow: hidden;
     margin-top: 30px;
 
+    @include abstracts.screen(lg) {
+        margin-top: 10px;
+    }
+
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
 .gameImg {
-    width: 388px;
+    width: 350px;
     height: 350px;
     object-fit: cover;
     border-radius: 15px;
+
+    @include abstracts.screen(lg) {
+        width: 260px;
+        height: 260px;
+    }
+
+    @include abstracts.screen(md) {
+        width: 160px;
+        height: 160px;
+    }
 }

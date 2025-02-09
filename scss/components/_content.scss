@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemCenter {
     display: flex;
     align-items: center;
@@ -6,6 +8,14 @@
 .content {
     @extend %flexItemCenter;
     justify-content: space-between;
+
+    &.sport {
+        display: none;
+
+        @include abstracts.screen(lg) {
+            display: flex;
+        }
+    }
 }
 
 .contentHeader {
@@ -15,6 +25,14 @@
     font-size: 3.6rem;
     font-weight: 700;
     line-height: 1.38;
+
+    @include abstracts.screen(lg) {
+        font-size: 2.2rem;
+    }
+
+    @include abstracts.screen(md) {
+        font-size: 1.8rem;
+    }
 }
 
 .contentLink {

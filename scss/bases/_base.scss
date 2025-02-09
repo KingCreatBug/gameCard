@@ -78,8 +78,14 @@ img {
 .container {
     padding-left: 60px !important;
     padding-right: 60px !important;
-    @include abstracts.screen(sm) {
+
+    @include abstracts.screen(lg) {
         padding-left: 20px !important;
         padding-right: 20px !important;
+    }
+
+    @include abstracts.screen(md) {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 }

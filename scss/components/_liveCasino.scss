@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemCenter {
     display: flex;
     align-items: center;
@@ -8,18 +10,32 @@
 }
 
 .liveCasinoGames {
+    position: relative;
     margin-top: 30px;
     @extend %flexItemCenter;
+    overflow: hidden;
+
+    @include abstracts.screen(lg) {
+        margin-top: 10px;
+    }
 }
 
 .liveCasinoBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
     width: 597px;
     height: 482px;
     object-fit: cover;
+
+    @include abstracts.screen(xl) {
+        display: none;
+    }
 }
 
 .gamesCasino {
-    margin-left: -20px;
+    margin-left: auto;
 }
 
 .gamesLarge,
@@ -35,16 +51,25 @@
 .gamesSmall {
     margin-top: 20px;
     grid-template-columns: repeat(6, 1fr);
+
+    @include abstracts.screen(lg) {
+        display: none;
+    }
 }
 
 .GameLargeImg,
 .gameSmallImg {
     width: 100%;
+    object-fit: cover;
     border-radius: 15px;
 }
 
 .GameLargeImg {
     height: 237px;
+
+    @include abstracts.screen(lg) {
+        height: auto;
+    }
 }
 
 .gameSmallImg {

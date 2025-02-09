@@ -1,3 +1,5 @@
+@use "../abstracts";
+
 %flexItemCenter {
     display: flex;
     align-items: center;
@@ -16,4 +18,9 @@
     line-height: 1.5;
     border-radius: 99px;
     transition: 0.25s all;
+
+    @include abstracts.screen(lg) {
+        width: 120px;
+        font-size: 1.6rem;
+    }
 }

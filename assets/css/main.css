@@ -212,10 +212,16 @@ img {
   padding-left: 60px !important;
   padding-right: 60px !important;
 }
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   .container {
     padding-left: 20px !important;
     padding-right: 20px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .container {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
   }
 }
 
@@ -309,7 +315,7 @@ html {
   --primaryColor: "#f6f6f6";
 }
 
-.menuItem, .navbarInner, .navDropdown, .money, .dropdownLink, .actionProfile, .actionLanguage, .actionBtn, .action, .slideText, .HeaderTopInner {
+.navItem, .menuItem, .navbarInner, .navDropdown, .money, .dropdownLink, .actionProfile, .actionLanguage, .actionBtn, .action, .slideText, .HeaderTopInner {
   display: flex;
   align-items: center;
 }
@@ -332,6 +338,19 @@ html {
 .slideText {
   position: relative;
   gap: 10px;
+  width: 40%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+@media (max-width: 1199.98px) {
+  .slideText {
+    width: 30%;
+  }
+}
+@media (max-width: 991.98px) {
+  .slideText {
+    display: none;
+  }
 }
 .slideText::after, .slideText::before {
   position: absolute;
@@ -390,6 +409,11 @@ html {
   padding-left: 12px;
   border-left: 1px solid #ffe81a;
   cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .actionLanguage {
+    display: none;
+  }
 }
 
 .flag {
@@ -463,6 +487,11 @@ html {
   padding: 10px 0;
   background: linear-gradient(90deg, #007534 0%, #009643 41%, #006c30 100%);
 }
+@media (max-width: 991.98px) {
+  .navbar {
+    display: none;
+  }
+}
 
 .navDropdown {
   transform: translateX(-100%);
@@ -495,6 +524,11 @@ html {
 .navbarInner {
   gap: 30px;
 }
+@media (max-width: 1199.98px) {
+  .navbarInner {
+    gap: 15px;
+  }
+}
 
 .menuItem {
   position: relative;
@@ -518,9 +552,58 @@ html {
   right: 0;
 }
 
-.footerSocialsList, .footerSocials, .footerCopyright, .footerCertificate, .footerTopImgs {
+.mainNav {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+  .mainNav {
+    gap: 5px;
+  }
+}
+
+.navItem {
+  width: 100%;
+  padding: 8px;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 8px;
+  background: #f0f0f0;
+  text-align: center;
+  color: #185745;
+  font-weight: 500;
+}
+@media (max-width: 767.98px) {
+  .navItem {
+    font-size: 1.2rem;
+  }
+}
+.navItem:hover {
+  background: #fff;
+}
+.navItem.active {
+  background: #fff;
+}
+
+.navIcon {
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.footerMobileIcon, .footerMobileItem,
+.footerMid, .footerMobileList, .footerSocialsList, .footerSocials, .footerCopyright, .footerCertificate, .footerTopImgs {
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 991.98px) {
+  .footerDesktop {
+    display: none;
+  }
 }
 
 .footerTop {
@@ -634,10 +717,94 @@ html {
   opacity: 0.8;
 }
 
+.footerMobile {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-top: 30px;
+  background: #fff;
+  box-shadow: 0px -5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 991.98px) {
+  .footerMobile {
+    display: block;
+  }
+}
+
+.footerMobileList {
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.footerBox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+@media (max-width: 767.98px) {
+  .footerBox {
+    grid-template-columns: repeat(2, 70px);
+  }
+}
+
+.footerMobileItem,
+.footerMid {
+  flex-direction: column;
+  gap: 5px;
+  color: #626262;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.62;
+}
+@media (max-width: 767.98px) {
+  .footerMobileItem,
+  .footerMid {
+    font-size: 1.2rem;
+  }
+}
+.footerMobileItem.active,
+.footerMid.active {
+  color: #185745;
+}
+.footerMobileItem.active > .mobileIcon,
+.footerMid.active > .mobileIcon {
+  fill: #185745;
+}
+
+.footerMid {
+  position: absolute;
+  left: 50%;
+  top: -24px;
+  translate: -50% 0;
+}
+
+.footerMobileIcon {
+  width: 46px;
+  height: 46px;
+  justify-content: center;
+  border-radius: 50%;
+  background: #185745;
+  box-shadow: 0px 0px 5px 0px rgba(59, 217, 172, 0.7);
+}
+
 .slides {
   position: relative;
   height: 445px;
   background: rgb(3, 35, 6);
+}
+@media (max-width: 1199.98px) {
+  .slides {
+    height: 315px;
+  }
+}
+@media (max-width: 991.98px) {
+  .slides {
+    height: auto;
+    background: initial;
+    margin: 0 10px;
+  }
 }
 
 .slidesICon {
@@ -646,6 +813,11 @@ html {
   translate: 0 -50%;
   opacity: 0.8;
   cursor: pointer;
+}
+@media (max-width: 991.98px) {
+  .slidesICon {
+    display: none;
+  }
 }
 .slidesICon:hover {
   opacity: 1;
@@ -665,6 +837,21 @@ html {
   height: 445px;
   object-fit: cover;
   margin: 0 auto;
+}
+@media (max-width: 1199.98px) {
+  .bannerImg {
+    width: 850px;
+    height: 315px;
+  }
+}
+@media (max-width: 991.98px) {
+  .bannerImg {
+    background: rgb(3, 35, 6);
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 15px;
+  }
 }
 
 .banner {
@@ -699,16 +886,29 @@ html {
   text-transform: uppercase;
 }
 
-.sportColData, .sportRow, .sportTeam, .sportTeams, .sportTopbox, .sportTopLeft, .sportTop, .sport {
+.sportColData, .sportRow, .sportTeam, .sportTeams, .sportTopbox, .sportTopLeft, .sportTop, .sportList {
   display: flex;
   align-items: center;
 }
 
 .sport {
   position: relative;
-  gap: 20px;
   margin-top: -80px;
+}
+@media (max-width: 991.98px) {
+  .sport {
+    margin-top: 30px;
+  }
+}
+
+.sportList {
+  gap: 20px;
   overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .sportList {
+    margin-top: 10px;
+  }
 }
 
 .sportItem {
@@ -860,6 +1060,12 @@ html {
   border-radius: 99px;
   transition: 0.25s all;
 }
+@media (max-width: 991.98px) {
+  .btn {
+    width: 120px;
+    font-size: 1.6rem;
+  }
+}
 
 .contentHeader, .content {
   display: flex;
@@ -869,6 +1075,14 @@ html {
 .content {
   justify-content: space-between;
 }
+.content.sport {
+  display: none;
+}
+@media (max-width: 991.98px) {
+  .content.sport {
+    display: flex;
+  }
+}
 
 .contentHeader {
   gap: 10px;
@@ -876,6 +1090,16 @@ html {
   font-size: 3.6rem;
   font-weight: 700;
   line-height: 1.38;
+}
+@media (max-width: 991.98px) {
+  .contentHeader {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 767.98px) {
+  .contentHeader {
+    font-size: 1.8rem;
+  }
 }
 
 .contentLink {
@@ -897,17 +1121,33 @@ html {
 }
 
 .liveCasinoGames {
+  position: relative;
   margin-top: 30px;
+  overflow: hidden;
+}
+@media (max-width: 991.98px) {
+  .liveCasinoGames {
+    margin-top: 10px;
+  }
 }
 
 .liveCasinoBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 597px;
   height: 482px;
   object-fit: cover;
 }
+@media (max-width: 1199.98px) {
+  .liveCasinoBg {
+    display: none;
+  }
+}
 
 .gamesCasino {
-  margin-left: -20px;
+  margin-left: auto;
 }
 
 .gamesLarge,
@@ -924,15 +1164,26 @@ html {
   margin-top: 20px;
   grid-template-columns: repeat(6, 1fr);
 }
+@media (max-width: 991.98px) {
+  .gamesSmall {
+    display: none;
+  }
+}
 
 .GameLargeImg,
 .gameSmallImg {
   width: 100%;
+  object-fit: cover;
   border-radius: 15px;
 }
 
 .GameLargeImg {
   height: 237px;
+}
+@media (max-width: 991.98px) {
+  .GameLargeImg {
+    height: auto;
+  }
 }
 
 .gameSmallImg {
@@ -956,9 +1207,20 @@ html {
   padding: 60px 0 30px;
   background: #cdf5dd;
 }
+@media (max-width: 991.98px) {
+  .topGames {
+    background: initial;
+    padding: 20px 0 10px;
+  }
+}
 
 .featureGames {
   margin-top: 30px;
+}
+@media (max-width: 991.98px) {
+  .featureGames {
+    margin-top: 10px;
+  }
 }
 
 .games {
@@ -969,18 +1231,40 @@ html {
   align-items: center;
   gap: 20px;
 }
+@media (max-width: 991.98px) {
+  .games {
+    margin-top: 10px;
+  }
+}
 
 .gameImg {
-  width: 388px;
+  width: 350px;
   height: 350px;
   object-fit: cover;
   border-radius: 15px;
+}
+@media (max-width: 991.98px) {
+  .gameImg {
+    width: 260px;
+    height: 260px;
+  }
+}
+@media (max-width: 767.98px) {
+  .gameImg {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 .intro {
   margin-top: 30px;
   padding: 30px 0;
   background: #cdf5dd;
+}
+@media (max-width: 991.98px) {
+  .intro {
+    display: none;
+  }
 }
 
 .introConatiner {
